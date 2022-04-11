@@ -1,8 +1,23 @@
 <?php
 
+use App\Http\Controllers\{  
+    DashboardController,
+    KategoriController,
+    LaporanController,
+    ProdukController,
+    MemberController,
+    PengeluaranController,
+    PembelianController,
+    PembelianDetailController,
+    PenjualanController,
+    PenjualanDetailController,
+    SettingController,
+    SupplierController,
+    UserController
+};
 
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\UserController;
+ 
 
 /*
 |--------------------------------------------------------------------------
@@ -15,11 +30,11 @@ use app\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/home', function() {
+Route::get('/', function() {
     return view('layouts.master');
 });
 
