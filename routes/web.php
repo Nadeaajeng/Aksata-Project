@@ -34,34 +34,11 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', function() {
-    return view('layouts.master');
-});
+Route::get('/', fn () => redirect()->route('login'));
 
-// Route::get('halo', 'App\Http\Controllers\barangController@data');
-
-
-
-
-// [App\Http\Controllers\UserController::class, 'index']
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Route::get('/home', function() {
+//     return view('login.auth');
+// });
 
 Route::middleware([
     'auth:sanctum',
@@ -69,6 +46,6 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+        return view('home');
+    })->name('home');
 });
